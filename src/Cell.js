@@ -10,6 +10,7 @@ class Cell extends React.Component {
 
     handleClick() {
         this.setState({current: this.props.getPlayer()});
+        this.props.changePlayer();
     }
 
     render() {
