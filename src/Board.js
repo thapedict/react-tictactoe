@@ -8,10 +8,18 @@ class Board extends React.Component {
         }
     }
 
+    changePlayer() {
+        let newPlayer = this.state.player === 'X' ? 'O': 'X';
+
+        this.setState({
+            player: newPlayer
+        })
+    }
+
     render() {
         return (
             <div className="Board">
-                <h1>Board {this.state.player}</h1>
+                <h1 onClick={()=>{this.changePlayer()}}>Board {this.state.player}</h1>
             </div>
         )
     }
