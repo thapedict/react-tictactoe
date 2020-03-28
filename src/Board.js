@@ -1,6 +1,7 @@
 import React from 'react';
 
 class Board extends React.Component {
+    cells = [1,2,3,5,6,7,8,9];
     constructor(props) {
         super(props);
         this.state = {
@@ -14,6 +15,10 @@ class Board extends React.Component {
         this.setState({
             player: newPlayer
         })
+    }
+
+    getPlayer() {
+        return this.state.player;
     }
 
     render() {
