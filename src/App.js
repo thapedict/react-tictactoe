@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
+import Board from './Board';
 
 class App extends React.Component {
-  constructor(props) {}
   render(){
     return (
       <div className="App">
-        
+        <Board />
       </div>
     )
   }
