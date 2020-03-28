@@ -25,7 +25,7 @@ class Board extends React.Component {
 
     clicked(key) {
         this.changePlayer();
-        this.props.clicked(key);
+        this.props.clicked(this.getPlayer(),key);
     }
 
     render() {
