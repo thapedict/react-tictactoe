@@ -1,6 +1,8 @@
 import React from 'react';
 
 class Cell extends React.Component {
+    clicked = false;
+
     constructor(props){
         super(props);
         this.state = {
@@ -9,8 +11,14 @@ class Cell extends React.Component {
     }
 
     handleClick() {
+        if( this.clicked ) {
+            return;
+        }
+
         this.setState({current: this.props.getPlayer()});
         this.props.changePlayer();
+
+        this.clicked = true;
     }
 
     render() {
