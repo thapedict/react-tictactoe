@@ -8,9 +8,13 @@ class Cell extends React.Component {
         }
     }
 
+    handleClick() {
+        this.setState({current: this.props.getPlayer()});
+    }
+
     render() {
         return (
-            <div className="Cell">{this.state.current}</div>
+            <div className="Cell" onClick={()=>this.handleClick()}>{this.state.current}</div>
         )
     }
 }
