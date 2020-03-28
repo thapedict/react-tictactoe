@@ -16,7 +16,7 @@ class Cell extends React.Component {
         }
 
         this.setState({current: this.props.getPlayer()});
-        this.props.clicked();
+        this.props.clicked(this.props.id);
 
         this.clicked = true;
     }
