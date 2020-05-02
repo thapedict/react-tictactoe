@@ -65,7 +65,12 @@ class Board extends React.Component {
 
     render() {
         const cellItems = this.cells.map((v) =>
-            <Cell key={v.toString()} id={v} getPlayer={this.getPlayer.bind(this)} clicked={this.clicked.bind(this)} />
+            <Cell
+                key={v.toString()}
+                id={v}
+                getPlayer={this.getPlayer.bind(this)}
+                clicked={this.clicked.bind(this)}
+            />
         );
 
         return (
